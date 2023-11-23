@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Game of Life</title>
+    <style>
+        .cell {
+            width: 10px;
+            height: 10px;
+            display: inline-block;
+        }
+        .alive {
+            background-color: white;
+        }
+        .dead {
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    {% for row in grid %}
+        {% for cell in row %}
+            <div class="cell {% if cell == 1 %}alive{% else %}dead{% endif %}"></div>
+        {% endfor %}
+        <br>
+    {% endfor %}
+</body>
+</html>
